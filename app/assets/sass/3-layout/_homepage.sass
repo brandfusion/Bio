@@ -1,0 +1,280 @@
+.homepage .head-image 
+  height: 735px
+  padding: 400px 0 0 0
+  background-position: center center
+  +tablet
+    height: 500px
+    padding: 270px 0 100px 0
+  +phone
+    height: 500px
+    padding: 250px 0 50px 0
+  .opacity-box 
+    background: rgba(0, 0, 0, 0.3)
+  p 
+    max-width: 85%
+    margin: 0 auto
+    +tablet 
+      max-width: 90%
+      line-height: 1.3
+    +phone
+      max-width: 90%
+      line-height: 1.3
+  h2
+    font-size: 62px
+    max-width: 80%
+    text-align: center
+    margin: 0 auto 0.1em auto
+    +tablet
+      font-size: 55px
+      line-height: 1
+      max-width: 90%
+    +phone
+      font-size: 41px
+      line-height: 1
+      max-width: 90%
+
+.blue-box, .purple-box, .brown-box   
+  background: rgba(0, 181, 226, 1)
+  color: #fff
+  min-height: 400px
+  padding: 1.5em 3em 2em 3em
+  margin: -60px 0 0 0
+  border: none
+  position: relative
+  z-index: 2  
+  width: 39%
+  +tablet
+    width: 32%
+  .opacity-box 
+    // background: rgba(0, 0, 0, 0.2)
+    background: none
+    position: absolute
+    height: 60px
+    max-width: 100%
+    min-height: 45px
+    top: 0
+    left: 0
+    right: 0
+    z-index: 3
+  +tablet
+    padding: 1.5em 1.5em 1.5em
+    width: 32%
+  +phone
+    border-right: none  
+    padding: 1.5em 1.5em 1.5em
+    min-height: auto
+    margin-bottom: 1em
+    width: 100%
+  div 
+    max-width: 315px
+    min-height: 200px
+    float: right
+    clear: both
+    background: url(../img/box-left.png) no-repeat bottom right
+    background-size: contain
+    +tablet
+      max-width: 100%
+    +phone
+      max-width: 100% 
+      min-height: 250px 
+  p
+    max-width: 85%
+    font-size: 18px
+    line-height: 1.3
+    font-family: 'NotoSans'
+    +tablet
+      max-width: 100% 
+      font-size: 16px
+    +phone
+      max-width: 100%   
+      font-size: 18px
+  h3
+    font-family: 'SwiftNeueLTPro-Bold'
+    font-size: 20px
+    font-weight: 700
+    line-height: 1.2
+    margin: 0 0 0.8em 0
+    max-width: 80%
+    position: relative
+    z-index: 99
+    float: right
+    max-width: 315px 
+    +tablet
+      font-size: 19px
+      max-width: 100% 
+    +phone
+      max-width: 100% 
+      font-size: 20px
+.purple-box           
+  background: rgba(114, 36, 108, 1)
+  border-right: none  
+  border: none
+  width: 19%
+  margin: -60px 1.5% 0 1.5%
+  +tablet 
+    padding: 1.5em 1.5em 1.5em
+    width: 32%
+    margin-left: 2%
+    margin-right: 2%    
+  +phone
+    border-left: none
+    padding: 1.5em 1.5em 1.5em
+    width: 100%
+    margin: 0
+    margin-bottom: 1em
+  div
+    background: url(../img/box-right.png) no-repeat bottom right
+    background-size: contain
+    max-width: 315px
+    clear: both
+    +phone
+      max-width: 100%
+    &.opacity-box 
+      +phone
+        display: none
+.brown-box       
+  background: rgba(178, 168, 158, 1)
+  border-right: none  
+  border: none
+  width: 39%
+  margin: -60px 0 0 0
+  padding: 1.5em 5em 0 5em
+  +tablet 
+    padding: 1.5em 1.5em 1.5em
+    width: 32%
+    margin-left: 0
+    margin-right: 0
+  +phone
+    border-left: none 
+    padding: 1.5em 1.5em 1.5em
+    width: 100%
+    margin: 0
+    margin-bottom: 1em
+  div
+    background: none
+    background-size: contain
+    max-width: 300px
+    min-height: auto
+    padding-bottom: 0
+    float: left
+    clear: both
+    &.news-box
+      margin-bottom: 30px
+    +phone
+      max-width: 100%
+    &.opacity-box 
+      +phone
+        display: none
+
+  h3 
+    max-width: 70%
+    float: left
+    +tablet 
+      max-width: 100%  
+    +phone 
+      max-width: 100%  
+  p 
+    font-size: 16px
+    max-width: 100%
+    margin: 10px 0 10px 0
+    +tablet
+      max-width: 100% 
+      font-size: 14px
+    +phone
+      max-width: 100%
+  span 
+    color: rgba(255, 255, 255, 0.6)
+    display: block
+  a 
+    display: inline-block
+    border: 2px solid #cec3b7 
+    padding: 7px 30px
+    margin: 1.5em 0 0 0   
+    line-height: 1.5
+    color: #cec3b7  
+    font-size: 14px
+    font-family: 'NotoSans-Bold'
+    &:hover
+      background: $brown
+      color: $white   
+
+.new-section
+  .blue-box, .purple-box
+    width: 49% !important
+    margin-right: 1%
+    min-height: 250px
+    +phone 
+      width: 100% !important
+      margin: 0 0 1.5em 0 !important
+    div 
+      max-width: 535px
+      &.opacity-box 
+        max-width: 100%
+  .purple-box
+    margin-right: 0
+    margin-left: 1%
+    div 
+      max-width: 500px
+      &.opacity-box 
+        max-width: 100%
+        +phone
+          display: none
+.withNews 
+  margin: 0 -35px
+  +tablet 
+    margin: 0
+  +phone
+    margin: 0          
+.withoutNews
+  +phone 
+    padding: 0 15px
+  .blue-box, .purple-box
+    width: 49% !important
+    margin-right: 1%
+    min-height: 250px
+    +phone 
+      width: 100% !important
+      margin: -45px 0 1.5em 0 !important
+    h3 
+      max-width: 510px
+      min-width: 510px
+      padding-right: 3em
+      float: right
+      +tablet 
+        min-width: 100% !important
+        max-width: 100% !important
+        padding: 0 1em 0 0
+      +phone
+        min-width: 100% !important
+        max-width: 100% !important
+        padding: 0 1em 0 0
+    div 
+      max-width: 510px
+      &.opacity-box 
+        max-width: 100%
+      +phone
+        min-width: 100%
+        max-width: 100%
+  .purple-box
+    margin-right: 0
+    margin-left: 1%
+    +phone
+      margin: 0 0 1.5em 0 !important
+    h3 
+      max-width: 510px
+      min-width: 510px
+      padding-right: 3em
+      float: left
+      +phone
+        min-width: 100%
+        max-width: 100%
+    div 
+      max-width: 500px
+      float: left
+      +phone
+        min-width: 100%
+        max-width: 100%
+      &.opacity-box 
+        max-width: 100%
+        +phone
+          display: none          

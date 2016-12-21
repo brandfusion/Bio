@@ -1,0 +1,1173 @@
+@font-face 
+  font-family: 'fs_elliotbold'
+  src: url('../fonts/fs_elliot-bold-webfont.woff2') format('woff2'), url('../fonts/fs_elliot-bold-webfont.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+@font-face 
+  font-family: 'fs_elliot_probold'
+  src: url('../fonts/fselliotpro-bold-webfont.woff2') format('woff2'), url('../fonts/fselliotpro-bold-webfont.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+@font-face
+  font-family: 'fs_elliot_proregular'
+  src: url('../fonts/fselliotpro-regular-webfont.woff2') format('woff2'), url('../fonts/fselliotpro-regular-webfont.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+@font-face
+  font-family: 'SwiftNeueLTPro-Bold'
+  src: url('../fonts/SwiftNeueLTPro-Bold.woff') format('woff')
+  font-weight: normal
+  font-style: normal  
+@font-face
+  font-family: 'SwiftNeueLTPro-Regular'
+  src: url('../fonts/SwiftNeueLTPro-Regular.woff') format('woff')
+  font-weight: normal
+  font-style: normal  
+@font-face 
+  font-family: 'NotoSans'
+  src: url('../fonts/NotoSans.eot')
+  src: url('../fonts/NotoSans.eot?#iefix') format('embedded-opentype'), url('../fonts/NotoSans.woff') format('woff'), url('../fonts/NotoSans.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
+@font-face
+  font-family: 'NotoSans-Bold'
+  src: url('../fonts/NotoSans-Bold.eot')
+  src: url('../fonts/NotoSans-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/NotoSans-Bold.woff') format('woff'), url('../fonts/NotoSans-Bold.ttf') format('truetype')
+  font-weight: bold
+  font-style: normal
+
+
+
+/* Sticky footer styles */
+html 
+  position: relative 
+  min-height: 100%
+body 
+  /* Margin bottom by footer height */
+  padding-bottom: 245px
+  min-height: 100%
+  color: $darkBrown
+  +phone
+    padding: 0
+.align-right 
+  text-align: right
+.align-left 
+  text-align: left 
+header
+  font-size: 1.2em
+  font-weight: 400
+  position: relative
+  z-index: 100
+  padding: 31px 0 29px 0
+  width: 100%
+  height: 90px
+  position: absolute
+  top: 45px
+  left: 0
+  -moz-transition: height 0.3s ease
+  -o-transition: height 0.3s ease
+  -webkit-transition: height 0.3s ease
+  transition: height 0.3s ease
+  background: rgba(255, 255, 255, 0.9)  
+  +tablet
+    top: 40px
+    height: 80px
+    padding: 26px 0
+  +phone
+    top: 18px 
+    height: 50px
+    padding: 14px 0
+  &:before
+    content: ""
+    background: #7b0a6b
+    position: absolute
+    width: 100%
+    height: 45px
+    left: 0
+    right: 0
+    top: 100%
+    z-index: -1
+    opacity: 0
+    -webkit-transition: all 0.3s ease-out
+    transition: all 0.3s ease-out   
+    +tablet
+      height: 40px
+    +phone 
+      height: 35px
+
+
+.header.drawer:before
+  opacity: 1
+  display: block
+  +phone
+    opacity: 0
+    display: none
+
+.dropdown-menu.active
+  display: block 
+  opacity: 1
+li.dropdown:hover .dropdown-menu.active
+  display: none 
+  opacity: 0
+.dropdown-menu>.active>a 
+  background: none !important
+
+.logo a
+  display: block
+  height: 35px
+  width: 219px
+  margin: 0
+  background-repeat: no-repeat
+  background-size: 100% auto
+  background-position: top left
+  +laptop 
+    // max-width: 70%
+  +tablet 
+    height: 28px
+    width: 175px
+  +phone
+   height: 23px
+   width: 144px
+.sticky-header .logo a
+  height: 28px
+  width: 175px
+  +tablet
+    height: 28px
+    width: 175px
+  +phone 
+    height: 18px
+    width: 113px
+
+nav ul
+  // margin: 13px 0 0 0
+  margin: 5px 0 0 0
+  padding: 0  
+  +phone
+    display: none
+  li 
+    list-style-type: none
+    display: inline-block
+    font-size: 1em
+    font-weight: 400
+    margin: 0 0 0 30px
+    position: static !important
+    +tablet 
+      margin: 0 0 0 12px      
+  li a 
+    font-size: 18px
+    color: $brown
+    text-decoration: none
+    font-family: 'SwiftNeueLTPro-Regular'
+    +tablet
+      font-size: 16px
+    &:focus
+      text-decoration: none 
+      color: $secondary
+      outline: 0px auto -webkit-focus-ring-color
+      outline-offset: 0
+    &:hover
+      color: $secondary
+  li.dropdown.selected > a
+    color: $secondary 
+.dropdown-menu
+  display: none
+  list-style-type: none
+  position: absolute
+  top: 100%
+  right: 15px
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.175)
+  box-shadow: none
+  border: none
+  background: $secondary
+  text-align: right
+  width: auto
+  z-index: 999
+  float: none
+  margin: 0 0 0 -100px
+  opacity: 0
+  background: transparent
+  padding-top: 38px
+  -webkit-transition: all 0.3s ease-out
+  transition: all 0.3s ease-out
+  +tablet
+    margin: 0 0 0 -150px
+    padding-top: 31px
+  li 
+    display: inline-block
+    margin: 0 0 0 30px
+  li a 
+    color: #ca9eca
+    padding: 3px 0 3px 0
+    background: none
+    line-height: 1.2
+    font-size: 15px
+    font-family: 'NotoSans'
+    &:hover
+      color: $white
+      background: none
+    &:focus 
+      background: none
+      outline: 0px auto -webkit-focus-ring-color
+      outline-offset: 0
+      color: $white
+nav ul li.dropdown:hover ul
+  display: block
+  opacity: 1
+
+.header.drawer ul li.active .dropdown-menu 
+  display: block !important
+  opacity: 1 !important
+
+.header.sticky-header
+  position: fixed
+  top: 0
+  height: 65px
+  padding: 19px 0 18px 0  
+  -moz-transition: height 0.3s ease
+  -o-transition: height 0.3s ease
+  -webkit-transition: height 0.3s ease
+  transition: height 0.3s ease
+  +tablet
+    height: 60px
+    padding: 15px 0
+  +phone
+    height: 50px  
+    padding: 14px 0
+  nav ul 
+    padding: 0
+    margin: 0
+    +tablet 
+      margin: 0 0 0 -150px
+  // .logo img 
+  //  max-width: 80%    
+  //  margin: 17px 0 0 0
+  //  +tablet 
+  //    max-width: 60%
+  //    margin: 11px 0 0 0
+  //  +phone
+  //    margin: 11px 0 0 0
+  &:before
+    height: 45px
+    +tablet
+      height: 40px
+  .dropdown-menu 
+    padding-top: 30px !important
+    +tablet 
+      padding-top: 28px !important
+
+ 
+.opacity-box-header
+  background: rgba(0, 0, 0, 0.6)
+  position: absolute
+  height: 45px
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: 3
+  +tablet
+    height: 40px
+  +phone
+    height: 18px
+.top-header
+  text-align: right
+  padding: 0
+  width: 100%
+  z-index: 999
+  position: absolute  
+  top: 0
+  left: 0
+
+  nav ul
+    margin: 0
+    display: block
+  nav ul li 
+    margin: 0 0 0 0
+    &:last-child:hover a
+      color: $white !important
+    &:last-child:hover .dropdown-menu 
+      display: block
+      opacity: 1
+  .dropdown-menu:before
+    content: '\f0d8'
+    font-size: 2em
+    font-family: 'fontAwesome'
+    color: $secondary
+    position: absolute
+    top: -24px 
+    right: 10px
+  a 
+    color: rgba(255, 255, 255, 0.6) !important
+    font-size: 13px
+    line-height: 1.5
+    font-family: 'NotoSans'
+    margin: 0
+    padding: 13px 5px
+    &:hover 
+      color: rgba(255, 255, 255, 1) !important
+    +tablet 
+      padding: 11px 5px 10px    
+    i 
+      font-size: 10px
+      display: inline-block
+      vertical-align: middle
+      margin-left: 5px    
+  a.global-sites
+    padding: 13px 15px
+    color: rgba(255, 255, 255, 0.6) !important
+    &:hover
+      color: rgba(255, 255, 255, 1) !important
+    +tablet 
+      padding: 11px 15px 10px 
+    
+  .dropdown-menu  
+    background: $secondary  
+    padding: 15px 30px 5px 0
+    width: auto
+    right: 15px
+    top: 100%
+    bottom: auto
+    left: auto
+    -webkit-border-radius: 0
+    -moz-border-radius: 0
+    border-radius: 0
+    display: none
+    &.open
+      display: block
+      opacity: 1
+      z-index: 999
+    li 
+      display: block
+      clear: both
+      padding: 0 0 10px 0   
+    a 
+      color: #ca9eca !important
+      font-size:  13px
+      font-family: 'NotoSans'
+      &:hover 
+        color: $white !important  
+    li.active a 
+      color: $white !important
+
+.top-header nav ul li:last-child:hover .dropdown-menu li a
+  color: #ca9eca !important
+  &:hover 
+    color: $white !important
+.top-header nav ul li:last-child:hover .dropdown-menu li.active a 
+  color: $white !important          
+  
+.head-image
+  background-repeat: no-repeat
+  background-position: top center
+  background-size: cover  
+  height: 614px
+  padding: 280px 0 0 0  
+  width: 100%
+  margin: 0
+  text-align: center
+  position: relative
+  +tablet
+    height: 400px
+    padding: 200px 0 150px 0
+  +phone
+    height: 400px
+    padding: 140px 0 150px 0
+  // .opacity-box 
+  //  background: rgba(0, 0, 0, 0.2)
+  //  position: absolute
+  //  bottom: 0
+  //  left: 0
+  //  right: 0
+  //  z-index: 3
+  .container 
+    position: relative
+    z-index: 5
+  h2 
+    font-size: 45px
+    font-family: 'SwiftNeueLTPro-Bold'
+    line-height: 1.2
+    margin: 0 0 0.3em 0
+    color: rgba(255, 255, 255, 0.9)
+    max-width: 50%
+    text-align: left
+    +tablet 
+      font-size: 35px
+      max-width: 70%
+    +phone
+      font-size: 25px
+      line-height: 1.1
+      max-width: 55%
+      margin: 0 0 0 0.5em
+  p
+    font-size: 18px
+    line-height: 1.5
+    color: rgba(255, 255, 255, 0.9)
+    font-family: 'NotoSans'
+    +phone
+      font-size: 16px
+  a
+    display: inline-block
+    border: 2px solid $white
+    padding: 7px 50px
+    margin: 1.5em 0 0 0   
+    line-height: 1.5
+    color: $white 
+    font-size: 18px
+    font-family: 'NotoSans-Bold'
+    &:hover
+      border: 2px solid $secondary
+      background: $secondary
+      color: $white
+  // a.scroll
+  //  position: absolute
+  //  bottom: 80px
+  //  left: 49%
+  //  z-index: 2
+  //  display: inline-block
+  //  -webkit-transform: translate(0, -50%)
+  //  transform: translate(0, -50%)
+  //  text-decoration: none
+  //  transition: opacity .3s
+  //  background: url(../img/down-arrow.png) no-repeat center center
+  //  border: none
+  //  height: 40px
+  //  width: 40px
+  //  opacity: 0.4
+  //  z-index: 5
+  //  +phone
+  //    left: 45%
+  //    bottom: 50px
+
+// white box
+.white-box, .wide-box 
+  background: rgba(255, 255, 255, 0.9)
+  margin: -160px auto 0
+  padding: 50px
+  font-size: initial
+  position: relative
+  // min-height: 500px
+  max-width: 1270px
+  box-sizing: border-box
+  z-index: 5
+  +tablet
+    padding: 1.5em 0
+    max-width: 100%
+    box-sizing: initial
+    margin: -80px 1em 0
+  +phone
+    padding: 1.5em 0
+    max-width: 100%
+    box-sizing: initial
+    margin: -80px 1em 0
+  h3
+    font-family: 'SwiftNeueLTPro-Bold'
+    color: $secondary
+    font-size: 36px
+    font-weight: 700
+    line-height: 1.2
+    margin: 0 0 0.5em 0 
+    +phone 
+      font-size: 25px
+  h2
+    margin: 1em 0 0.5em 0
+  p 
+    margin: 0 0 1.5em 0
+    font-size: 0.9em
+    line-height: 1.5
+    max-width: 65%
+    +tablet
+      max-width: 60%
+    +phone
+      max-width: 100%
+  quote
+    padding: 2em 0 2em 5em
+    margin: 0       
+    display: block
+    font-size: initial  
+    position: relative    
+    +phone
+      padding: 2em 0 2em 2em
+    &:before
+      content: '“'
+      font-family: 'fontAwesome'
+      position: absolute
+      top: 25px
+      left: 30px
+      font-size: 5em
+      line-height: 1
+      color: $blue
+      +phone
+        top: 22px
+        left: 0px
+        font-size: 3.5em
+    
+    p
+      color: $blue
+      font-size: 2em
+      max-width: 85%
+      line-height: 1.3
+      margin: 0 0 0.5em 0
+      font-family: 'SwiftNeueLTPro-Regular'
+      +phone
+        max-width: 100%
+        font-size: 1.5em
+    .close-quote:after
+      content: '”'
+      font-family: 'fontAwesome'      
+      font-size: 1.1em
+      color: $blue
+      margin: 0 0 0 -10px
+    a 
+      font-size: 0.8em
+      color: #B2A89E
+      font-weight: 400
+      padding: 1em 7em 0.5em 0
+      display: inline-block
+      clear: both
+      text-decoration: none !important
+      border-top: 1px solid #B2A89E
+      &:hover 
+        color: $secondary
+      +phone
+        width: 100%
+  ul      
+    margin: 1em 0 1em 1.5em
+    padding: 0
+    li
+      list-style-type: disc
+      margin: 0 0 7px 0
+      padding: 0
+      color: $darkBrown
+      font-size: 14px
+      font-family: 'NotoSans'
+      ul li 
+        list-style-type: circle
+
+
+.wide-box 
+  width: 100%
+  clear: both
+  margin: 0 auto
+  h4
+    font-family: 'SwiftNeueLTPro-Bold'
+    color: $secondary
+    font-size: 25px
+    font-weight: 700
+    line-height: 1.2
+    margin: 0 0 0.5em 0 
+    +phone 
+      font-size: 18px
+  p 
+    margin: 0 0 1.5em 0
+    font-size: 0.9em
+    line-height: 1.5
+    max-width: 65%
+    +tablet
+      max-width: 100%
+    +phone
+      max-width: 100%
+  a.read-more
+    display: inline-block
+    border: 2px solid $primary
+    padding: 5px 50px
+    margin: 1.5em 0 0 0   
+    line-height: 1.5
+    color: $primary 
+    font-size: 14px
+    font-family: 'NotoSans'
+    &:hover
+      border: 2px solid $secondary
+      background: $secondary
+      color: $white  
+  quote 
+    +tablet 
+      &:before 
+        top: 25px
+        font-size: 3.5em     
+      p
+        font-size: 1.5em
+        max-width: 95%
+    +phone
+      &:before 
+        top: 25px
+        font-size: 3.5em
+
+
+// tabs 
+ul.nav-tabs
+  margin: 0
+  font-size: 1em
+  max-width: 100%
+  padding: 0
+  position: absolute
+  top: -78px
+  right: -63px
+  border: none
+  +tablet
+    top: -54px
+    right: -1px
+  +phone
+    top: -54px
+    right: -15px
+  li    
+    margin: 0 0 0 1px 
+    a 
+      padding: 8px 25px
+      background: #e3d7cb
+      color: #a89989
+      font-size: 14px
+      font-weight: 600
+      line-height: 1
+      border: none !important
+      border-radius: 0
+      margin: 0
+      &:hover 
+        border: none
+        padding: 8px 25px
+        background: #a89989
+        color: #fff
+    &.active 
+      background: none
+      a 
+        background: #a89989
+        color: #fff
+        font-size: 14px
+        border: none !important
+        border-radius: 0
+        padding: 8px 25px
+        &:hover, &:focus  
+          background: #a89989
+          color: #fff
+.tab-content 
+  h3 
+    margin: 0 0 0 0
+  span 
+    color: #999
+    display: block
+    font-size: 14px
+    margin: 0 0 1.5em 0         
+
+// purple box wide
+.purple-box-wide
+  padding: 0
+  background: #7b0a6b
+  color: $white
+  font-size: initial  
+  +phone
+    padding: 0 1em
+  h2 
+    margin: 2em 0 1em 0
+    +phone
+      margin: 1em 0 1em 0
+  .col
+    padding: 2em 0
+    +phone
+      padding: 1em 0
+      border-bottom: 1px solid #6b095d
+    img 
+      max-width: 100%
+    h3, p, .nr
+      font-size: 1em 
+      font-weight: 600
+      line-height: 1.2
+      color: #b574a6
+    h3 
+      margin: 0 0 0.5em 0
+    p 
+      font-size: 0.8em
+      line-height: 1.5
+      font-weight: 400
+    .nr 
+      font-style: italic
+
+  .col:hover
+    background: #6b095d 
+    cursor: default
+    h3, p 
+      color: $white
+.purple-border 
+  background: url(../img/purple-border.jpg) repeat-y center center #7b0a6b
+  padding: 2em 0
+  +phone 
+    background: url(../img/purple-border.jpg) repeat-y 30px 0 #7b0a6b
+
+
+// sidebar
+.sidebar 
+  min-width: 250px
+  max-width: 250px
+  // float: right
+  font-size: initial
+  margin: 3em 0 0 0
+  position: absolute
+  top: 0
+  right: 3em
+  +tablet
+    min-width: 200px
+    max-width: 200px
+  +phone 
+    margin: 0
+    max-width: 100%
+    width: 100%
+    position: static
+    top: auto
+    right: auto
+    clear: both
+  h3 
+    font-size: 0.8em
+    color: #ee2439
+  ul
+    margin: 0.8em 0 0 0
+    padding: 0
+    li 
+      margin: 0
+      padding: 0
+      font-size: initial
+      list-style-type: none
+      a 
+        display: inline-block
+        font-size: 0.8em
+        font-weight: 400
+        line-height: 1.5
+        text-align: left
+        border: none
+        padding: 0  
+        margin: 0     
+  p 
+    max-width: 100%
+    margin: 0 0 0.3em 0
+  img 
+    margin: 0 0 1.5em 0
+  a
+    display: block
+    padding: 0.5em 1em
+    font-size: 0.8em
+    font-weight: 600
+    color: $brown
+    width: 100%
+    text-align: center
+    margin: 0 0 1em 0
+    text-decoration: none !important
+    border: 2px solid $brown
+    &:hover 
+      color: $white
+      background: $secondary
+      border: 2px solid $secondary
+  .circle-box     
+    color: #fff
+    padding: 70px 80px 110px 80px
+    -webkit-border-radius: 100%
+    border-radius: 100%
+    margin: -50px -70px 0 -120px
+    position: relative
+    +tablet
+      padding: 10px 30px 30px 20px
+      margin: 0 -20px 0 -40px
+    +phone
+      padding: 50px
+      margin: 0
+    span.blue-circle
+      -webkit-border-radius: 100%
+      border-radius: 100%
+      margin: -60px -70px 0 -70px
+      background: #00b5e2
+      position: absolute
+      left: 00px
+      top: 60px
+      width: 450px
+      height: 450px
+      z-index: -1
+      +tablet 
+        top: 20px
+        width: 300px
+        height: 300px
+      +phone 
+        top: 20px
+        width: 300px
+        height: 300px
+        margin: -20px -100px 0 -10px
+    h4 
+      font-family: 'SwiftNeueLTPro-Bold'
+      font-size: 4em
+      line-height: 1
+      margin: 0 0 15px 0
+      position: relative
+      z-index: 99
+      +tablet 
+        font-size: 2em
+        line-height: 1.2
+      +phone
+        font-size: 2em
+    p
+      max-width: 80%
+      position: relative
+      z-index: 99
+      +tablet
+        line-height: 1.2
+      +phone
+        max-width: 100%
+
+
+.next-button 
+  position: absolute
+  top: -36px
+  right: 0
+  a 
+    padding: 10px 60px
+    font-size: 16px
+    line-height: 1
+    color: $white
+    min-width: 100px
+    text-align: center
+    background: #938577
+    text-decoration: none
+    &:hover
+      text-decoration: none
+
+
+// footer
+footer
+  font-size: initial
+  clear: both
+  padding: 30px 0 0 0
+  margin: 0
+  background: #f7f6f3
+  position: absolute
+  bottom: 0
+  width: 100%
+  height: 245px
+  +phone
+    padding: 0
+    position: static
+    bottom: auto
+  nav
+    +phone
+      padding: 0 !important
+  nav ul
+    display: block    
+    +phone
+      margin: 0
+  nav ul li 
+    width: 20%
+    float: left
+    padding: 0 0 20px 0
+    margin: 0
+    vertical-align: top
+    font-weight: 600
+    font-size: 0.8em    
+    +phone
+      width: 100%
+      padding: 0
+    +tablet
+      padding: 0 20px 0 0     
+    a 
+      font-size: 13px
+      padding: 0
+      margin: 0
+      display: block
+      color: $brown
+      font-family: 'NotoSans-Bold'  
+      +phone
+        padding: 1em 1em
+        font-size: 13px
+        font-family: 'NotoSans-Bold'  
+        border-bottom: 1px solid #e3d7cb
+        &:after 
+          float: right
+          content: "\f067"
+          font-family: 'fontAwesome'
+  nav ul li ul
+    margin: 0.5em 0 0 0
+    padding: 0  
+    +phone
+      display: none 
+      margin: 0
+  nav ul li ul li
+    display: block
+    line-height: 1.5
+    font-weight: 400
+    font-size: 1em
+    width: 100%   
+    padding: 0
+    a 
+      font-size: 13px
+      line-height: 1.5
+      color: $brown
+      font-family: 'NotoSans'
+      +tablet
+        font-size: 12px
+      +phone        
+        border-bottom: none
+        border-top: 1px solid #a89989         
+    &:first-child a
+      border-top: none
+  li.opened
+    background: none !important
+    border-top: none !important   
+    background: #e3d7cb !important    
+    a
+      color: #523e36  
+  ul.opened
+    background: #523e36   
+    float: left
+    width: 100%
+    a
+      color: #a59480  
+    a:hover 
+      color: #a89989
+    a:after
+      content: "\f068"
+    a:after         
+      content: "\f105" !important
+      font-family: 'fontAwesome'  
+      color: #a59480 !important
+    ul li a  
+      color: #a89989
+  .copyright
+    margin: 0 0 0.5em 0
+    font-size: 0.8em
+    color: $brown
+    text-align: left
+
+
+.footer-logo 
+  background: #63513D
+  padding: 30px 0
+  border-top: 1px solid #a89989
+  +phone 
+    padding: 30px 0 65px 0
+  img    
+    height: 30px
+  .copyright
+    padding-top: 5px
+    font-size: 12px
+    text-align: right
+    color: #fff
+
+.mobile-menu-trigger 
+  background: none
+  color: $darkBrown
+  position: absolute
+  z-index: 9999
+  right: 1em
+  top: 0.8em    
+  +tablet
+    top: 1.9em
+  i 
+    font-size: 1.5em
+.header.sticky-header .mobile-menu-trigger
+  +phone 
+    top: 0.8em !important  
+  +tablet
+    top: 1em  
+
+.services-box
+  margin: 0
+  display: block
+  .services-img 
+    height: 400px
+    overflow: hidden
+    background-repeat: no-repeat
+    background-position: center  center
+    background-size: cover
+    position: relative
+    button 
+      position: absolute
+      background: none
+      top: 45%
+      left: 45%      
+      border: none
+      padding: 0
+      &:active, &:focus 
+        background: none !important
+        border: none !important
+        outline: 0 auto -webkit-focus-ring-color !important
+        outline-offset: -2px !important
+        -webkit-box-shadow: inset 0 0 0 rgba(0,0,0,.125)
+        box-shadow: inset 0 0 0 rgba(0,0,0,.125)
+    span
+      margin: 0
+      display: block      
+      background: url(../img/sprite.png) no-repeat 0 0
+      width: 71px
+      height: 71px
+     
+  .services-details
+    padding: 3em 2em 
+    background: #fff
+    text-align: center
+  h4 
+    font-size: 30px
+    line-height: 1.3
+    color: #57473e
+    margin: 0 0 0.5em 0
+    +tablet
+      font-size: 20px
+    +phone
+      font-size: 20px
+  p 
+    max-width: 80%
+    text-align: center
+    font-size: 16px
+    line-height: 1.5
+    color: #a89989
+    margin: 0 auto
+    +tablet
+      font-size: 14px
+      max-width: 85%
+    +phone
+      font-size: 14px
+      max-width: 85%
+  a 
+    display: inline-block
+    padding: 0.5em 1em
+    font-size: 0.9em
+    font-weight: 600
+    color: $primary
+    width: 60%
+    text-align: center
+    margin: 5em 0 1em 0
+    border: 2px solid $primary
+    +tablet
+      margin: 2em 0 1em 0   
+
+.perspective-box
+  margin: 2em -15px 0 -15px 
+  display: block
+  .perspective-img
+    height: 400px
+    overflow: hidden
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+    float: right
+    margin: -100px 0 0 0
+    z-index: 99
+    position: relative
+    a.download   
+      position: absolute
+      top: 33%
+      left: 42%       
+      margin: 0
+      display: block      
+      font-family: 'NotoSans'
+      color: $white
+      font-size: 12px
+      font-weight: 400
+      width: 82px
+      height: 102px
+      text-align: center
+      padding-top: 85px
+      background: url(../img/sprite.png) no-repeat -71px -158px
+      +tablet
+        background-size: 100% auto
+        padding-top: 70px
+        top: 20%
+        left: 42%
+        width: auto
+        height: auto
+  .perspective-details
+    padding-bottom: 3em 
+    background: none
+    text-align: left
+    span 
+      color: #ee2439
+      font-size: 16px
+      display: block
+      margin: 2em 0 1em 0
+      +tablet
+        margin: 0 0 1em 0
+    a.author
+      font-size: 16px
+      color: #a89989
+      margin: 0 0 1em 0 
+      display: inline-block
+      &:hover 
+        color: $secondary
+    h4 
+      font-size: 32px
+      line-height: 1.3
+      color: #65513c
+      max-width: 80%
+      margin: 0 0 0.5em 0
+      +tablet
+        font-size: 22px
+        max-width: 100%
+      +phone
+        max-width: 100%
+        font-size: 25px
+    p 
+      max-width: 100%
+      text-align: left
+      font-size: 16px
+      line-height: 1.5
+      color: #57473e
+      margin: 0 0 1em 0
+      +phone
+        max-width: 100%
+    button 
+      display: inline-block
+      padding: 0.5em 2.5em
+      font-size: 0.9em
+      font-weight: 600
+      color: $primary
+      width: auto
+      text-align: left
+      margin: 1em 0 0 0
+      background: none
+      border: 2px solid $primary
+      &:focus 
+        outline-offset: 0   
+  .text-wrap
+    float: left
+    width: 100%
+    .text
+      height: 160px
+      overflow: hidden
+
+.no-bg
+  background: none !important
+  padding-top: 6em !important
+
+.back-to-top, .back-to-top:focus, .back-to-top:active
+  width: 100%
+  padding: 1em 0
+  font-size: 14px
+  background: #f1e9e2 
+  color: #a59480
+  text-align: center
+  font-weight: 600
+  font-family: 'SwiftNeueLTPro-Bold'
+  span 
+    display: inline-block
+    vertical-align: top
+    margin: 2px 15px 0 0
+    background: url(../img/back-to-top.png) no-repeat center center
+    width: 12px
+    height: 12px
+
+.atss-right .at-share-close-control .at4-arrow 
+  display: none !important    
+
+.at4-hide 
+  display: block !important
+  visibility: visible
+.at4-hide-content, .at4-show-content 
+  display: block !important
+  visibility: visible !important  
+.at4-show, .at4-show-content, div.at4-arrow, .at4-hide, .at4-hide-content, .at-share-close-control.ats-transparent.at4-show.at4-hide-content
+  display: block !important    
+  width: 48px !important
+  height: 48px !important
+  visibility: visible !important
+  opacity: 1 !important
+  display: block !important
+  background: url(../img/share-icon.png) no-repeat center center #e8e5e2 !important
+.at-share-open-control-right 
+  right: 0 !important
+#at4-recommendedpanel-outer-container .at4-arrow.at-left, div.at4-arrow.at-left 
+  background: none !important
+.flip 
+  transform: rotate(180deg)
+  transition: all 0s linear
+

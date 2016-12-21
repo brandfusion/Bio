@@ -1,0 +1,304 @@
+.read-more 
+  text-align: center
+  a
+    display: inline-block
+    border: 2px solid #c2bcb8
+    padding: 0.5em 5em
+    margin: 1.5em 0 4em 0
+    font-size: 1em
+    line-height: 1.5
+    color: $brown 
+    &:hover
+      background: $white
+      color: $brown
+// .history-box
+//   padding: 1em 0    
+//   .first 
+//     padding-right: 100px
+//     text-align: right
+//     +phone 
+//       padding-left: 50px
+//       text-align: left
+//       padding-right: 20px
+//   .last 
+//     padding-left: 100px
+//     text-align: left
+//     +phone 
+//       padding-left: 50px
+//       text-align: left
+//   h3
+//     margin: 0 0 0.5em 0
+//     max-width: 80%
+//     +phone
+//       max-width: 100%
+//   p 
+//     margin: 0 0 1em 0
+//     line-height: 1.5
+//     font-size: 0.9em
+//     max-width: 80%
+//     +phone
+//       margin: 0 0 0 0
+//       max-width: 100%
+//   .year
+//     font-size: 2em
+//     font-weight: 600
+//     line-height: 1
+
+.person-box 
+  margin: 0 0 2em 0
+  // &:nth-child(n+1)
+  //   padding-left: 0
+  //   +phone
+  //     padding: 0
+  // &:nth-child(2n+1)
+  //   padding-left: 15px
+  //   padding-right: 0
+  //   +phone
+  //     padding: 0
+
+  +phone
+    margin: 0 0 1em 0
+  .person-img
+    padding: 0
+    min-height: 150px
+    background-repeat: no-repeat
+    background-position: center  center
+    background-size: cover
+    position: relative
+    +phone
+      min-height: 100px
+  .person-details 
+    background: #fbf4ef
+    min-height: 150px
+    padding-left: 3em
+    +tablet
+      padding-left: 1.5em
+    +phone
+      min-height: 100px
+      padding: 0.2em 0 0.2em 1.5em
+    h3 
+      font-size: 1em
+      color: #57473e
+      padding: 0.8em 0 0 0
+      margin: 0 0 0.5em 0
+      font-family: 'NotoSans'
+      +phone
+        padding: 5px 0 0 0
+        font-size: 0.9em
+    p 
+      font-size: 0.9em
+      color: #a89989
+      margin: 0.2em 0 2em 0
+      +tablet
+        font-size: 12px
+      +phone
+        font-size: 0.8em
+        margin: 0.2em 0
+    a 
+      font-size: 0.8em
+      font-weight: 400
+      color: #a89989
+      margin: 0
+      display: block
+      position: absolute
+      bottom: 1em
+      right: 1em
+      left: 3.7em
+      +tablet
+        left: 2em
+      +phone
+        float: right        
+
+.light-bg
+  position: relative 
+  background: #F9f9f9
+  padding: 2em 0  
+  h2, h3
+    color: $secondary
+    font-size: 1.5em
+    font-weight: 600
+    line-height: 1.3
+    margin: 0 0 1em 0   
+  .box
+    border-top: 1px solid #a89989
+    padding: 1em 0
+    h3
+      font-size: 1.1em
+      font-weight: 700
+      color: #57473e
+      padding: 0
+      +phone
+        padding: 0
+        font-size: 1.1em
+    p 
+      font-size: 1em
+      color: #a89989
+      margin: 0
+      +phone
+        font-size: 0.9em
+        margin: 3px 0 0 0
+  .view-more-btn 
+    color: #e3d7cb
+    font-size: 1.5em
+    text-decoration: none     
+  .view-more 
+    clear: none
+    float: right
+    position: absolute
+    right: 15px
+    bottom: 0
+    .view-more-btn
+      float: right
+      margin: 0.5em 0       
+  .item 
+    position: relative
+  .box-details 
+    display: none
+    width: 70%
+    float: right
+    +phone
+      margin: 20px 0 0 0
+      width: 80%        
+  .opened
+    width: 100% !important
+    .view-more 
+      clear: both 
+      position: static
+      right: auto
+      top: auto 
+      float: left
+    .view-more-btn
+      float: left 
+      font-size: 1.5em
+      margin: 0 0 20px 0
+  .brown-bg
+    background: #e8e5e2
+    position: absolute
+    width: 100%
+    top: 320px
+    left: 0
+    right: 0
+    bottom: 0
+.new-bg 
+  background: #e8e5e2 
+  border-bottom: 3px solid #bab0a7 
+  margin-top: 150px 
+  padding: 2em 0 0
+
+  +tablet 
+    margin-top: 50px
+  +phone 
+    margin-top: 70px
+  .more-btn
+      background: url(../img/sprite.png) no-repeat -155px -79px
+      background-color: rgba(255, 255, 255, 0.5)
+      width: 70px
+      height: 70px
+      display: block
+      margin: 0 auto -35px auto
+      padding: 0
+      position: relative
+      z-index: 99 
+
+.purple-border
+  padding: 2em 0 5em 0
+
+.history-box
+  position: relative
+  padding: 5em 0 0 0
+  clear: both
+  +phone
+    padding: 3em 0 0 0
+  h3
+    font-size: 1.3em
+    line-height: 1.2
+    margin: 6px 0 10px 0
+    max-width: 100%
+    font-family: 'SwiftNeueLTPro-Bold'
+  p
+    max-width: 100%
+
+.leftBox
+  .history-year
+    float: left
+    text-align: right
+    padding-right: 120px
+    font-size: 2.5em
+    font-weight: 600
+    line-height: 1.3
+    position: relative
+    font-family: 'SwiftNeueLTPro-Bold'  
+    +tablet 
+      padding-right: 70px
+    +phone
+      font-size: 1.7em
+  .history-details
+    float: left
+    text-align: left
+    padding-left: 120px
+    padding-right: 30px
+    position: relative
+    +tablet 
+      padding-left: 70px
+.rightBox
+  .history-year
+    float: right
+    text-align: left
+    padding-left: 120px
+    font-size: 3em
+    font-weight: 600
+    line-height: 1
+    position: relative
+    font-family: 'SwiftNeueLTPro-Bold'
+    +tablet 
+      padding-left: 70px
+    +phone 
+      font-size: 1.7em
+  .history-details
+    float: left
+    text-align: right
+    padding-right: 120px
+    padding-left: 30px
+    position: relative
+    +tablet 
+      padding-right: 70px
+
+.history-box
+  &.leftBox:before, &.rightBox:before
+    width: 13em
+    border-bottom: 3px dotted #98408c
+    display: inline-block
+    position: absolute
+    left: 50%
+    margin-left: -6.5em
+    top: 6.3em
+    +tablet
+      width: 7em
+      margin-left: -3.5em
+  &.leftBox:after, &.rightBox:after
+    width: 1.2em
+    height: 1.2em
+    border-radius: 100%
+    border: 2px solid #fff
+    display: inline-block
+    position: absolute
+    left: 50%
+    margin-left: -0.6em
+    top: 5.8em
+    background: #7b0a6b
+    +phone
+      top: 3.2em
+
+#widecontent .history-box.leftBox.active:after
+  width: 1.2em
+  height: 1.2em
+  border-radius: 100%
+  border: 2px solid #fff
+  display: inline-block
+  position: absolute
+  left: 50%
+  margin-left: -0.6em
+  top: 5.8em
+  background: #fff    
+  +phone
+    top: 3.2em
